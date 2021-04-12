@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bonjour</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <h1>
+        3 Premiers instruments : <br>
+        {% for product in products|slice(0, 3) %} 
+        {{ product }} ,
+        {% endfor %}
+        <br> <br>
+        3 suivants instruments : <br>
+        {% for product in products|slice(3, 6) %} 
+        Bonjour {{ product }} , 
+        {% endfor %}
+        <br> <br>
+        {{ dump(products) }}
+    </h1>
+</body>
+</html>
